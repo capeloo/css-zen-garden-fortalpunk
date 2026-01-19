@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+@font-face {
+    font-family: "Painterz";
+    src: url(assets/fonts/Painterz.ttf) format('truetype');
+}
+
+/* HEADER */
+
+header {
+    width: 100%;
+    height: 55rem;
+
+    background-image: url(assets/images/bg-01.png);
+    background-position: top center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header>h1 {
+    font-family: "Painterz";
+    font-size: 12rem;
+    color: #FE9D33;
+    line-height: 9rem;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header>h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+    color: #6C1919;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* MAIN */
+
+#sec-01 {
+    width: 100%;
+    height: 40rem;
+
+    background-image: url(assets/images/bg-02.png);
+    background-position: center bottom;
+    background-size: cover;
+
+}
+
+#sec-01>div {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+#sec-01>div>p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    color: #FE9D33;
+    width: 30rem;
+    text-align: start;
+    line-height: 1.8rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    
+}
+
+#sec-01>div>p>a {
+    text-decoration: underline;
+    color: #FE9D33;
+    font-weight: bold;
+}
+
+#sec-01>div>ul {
+    list-style: none;
+    column-count: 2;
+    margin-left: 8rem;
+    
+}
+
+#sec-01>div>ul>li {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 15rem;
+    line-height: 1.7rem;
+    height: 7rem;
+    padding: 2rem;
+    color: #6C1919;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    text-align: end;
+
+    background-image: url(assets/images/box-01.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#sec-01>div>ul>li:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+#sec-01>div>ul>a {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #FE9D33;
+    margin-left: 11.5rem;
+}
+
+#icon-01 {
+    position: relative;
+    top: -3rem;
+    left: 77rem;
+
+    width: 5rem;
+
+    z-index: 10;
+}
+
+#sec-02 {
+    width: 100%;
+    height: 55rem;
+
+    background-image: url(assets/images/bg-03.png);
+    background-position: center bottom;
+    background-size: cover;
+    
+}
+
+#sec-02>div {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+#sec-02>div>h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3rem;
+    width: 25rem;
+    color: #6C1919;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+    text-align: end;
+}
+
+#sec-02>div>p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.8rem;
+    color: #6C1919;
+    width: 38rem;
+    text-align: start;
+    line-height: 1.8rem;
+    margin-left: 5rem;
+    
+}
+
+#icon-02 {
+    position: relative;
+    top: -3.4rem;
+    left: 3rem;
+
+    width: 7rem;
+
+    z-index: 10;
+}
+
+#sec-03 {
+    width: 100%;
+    height: 55rem;
+
+    background-image: url(assets/images/bg-04.png);
+    background-position: center bottom;
+    background-size: cover;
+    
+}
+
+#sec-04 {
+    width: 100%;
+    height: 100rem;
+
+    background-image: url(assets/images/bg-05.png);
+    background-position: center bottom;
+    background-size: cover;
+    
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 22rem;
+
+    background-image: url(assets/images/bg-06.png);
+    background-position: center top;
+    background-size: cover;
+}
+
+#img-01 {
+    position: relative;
+    display: block;
+    top: -12.5rem;
+    left: 49.3rem;
+
+    width: 35rem;
+    overflow: hidden;
+    z-index: 10;
+}
