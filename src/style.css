@@ -8,11 +8,21 @@
     src: url(assets/fonts/Painterz.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: "Fanky";
+    src: url(assets/fonts/FankyBubbleGraffiti-Regular.otf) format('opentype');
+}
+
+@font-face {
+    font-family: "Ghoust";
+    src: url(assets/fonts/Ghoust-Solid.otf) format('opentype');
+}
+
 /* HEADER */
 
 header {
     width: 100%;
-    height: 55rem;
+    min-height: 55rem;
 
     background-image: url(assets/images/bg-01.png);
     background-position: top center;
@@ -24,14 +34,71 @@ header {
     align-items: center;
 }
 
-header>h1 {
-    font-family: "Painterz";
+header > h1 {
     font-size: 12rem;
-    color: #FE9D33;
-    line-height: 9rem;
     letter-spacing: 0.5rem;
+    line-height: 9rem;
     text-align: center;
+
+    font-family: "Painterz";
+    color: #FE9D33;
     -webkit-text-stroke: 1px #fff;
+
+    animation: glitch-swap 3s infinite steps(1);
+}
+
+
+@keyframes glitch-swap {
+    0%, 30% {
+        font-family: "Painterz";
+        transform: none;
+        color: #FE9D33;
+        text-shadow:
+            -4px 0 #00fff9,
+             4px 0 #ff0055;
+    }
+
+    31%, 45% {
+        font-family: "Fanky";
+        transform: translateX(-3px) skewX(8deg);
+        color: #10F7B8;
+        text-shadow:
+            3px 0 #00fff9,
+           -3px 0 #ff0055;
+    }
+
+    46%, 50% {
+        font-family: "Painterz";
+        transform: none;
+        color: #FE9D33;
+        text-shadow:
+            -4px 0 #00fff9,
+             4px 0 #ff0055;
+    }
+
+    51%, 70% {
+        font-family: "Ghoust";
+        transform: translateY(2px);
+        color: #FBD900;
+        text-shadow:
+            2px 2px #ff0055;
+    }
+
+    71%, 85% {
+        font-family: "Painterz";
+        transform: none;
+        color: #FE9D33;
+        text-shadow: none;
+    }
+
+    86%, 100% {
+        font-family: "Fanky";
+        transform: translate(-4px, 1px) skewX(-12deg);
+        color: #10F7B8;
+        text-shadow:
+            -4px 0 #00fff9,
+             4px 0 #ff0055;
+    }
 }
 
 header>h2 {
@@ -45,9 +112,16 @@ header>h2 {
 
 /* MAIN */
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+
 #sec-01 {
     width: 100%;
-    height: 40rem;
+    min-height: 40rem;
 
     background-image: url(assets/images/bg-02.png);
     background-position: center bottom;
@@ -63,7 +137,7 @@ header>h2 {
 
 #sec-01>div>p {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #FE9D33;
     width: 30rem;
     text-align: start;
@@ -88,7 +162,7 @@ header>h2 {
 
 #sec-01>div>ul>li {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
     width: 15rem;
     line-height: 1.7rem;
@@ -132,7 +206,7 @@ header>h2 {
 
 #sec-02 {
     width: 100%;
-    height: 55rem;
+    min-height: 55rem;
 
     background-image: url(assets/images/bg-03.png);
     background-position: center bottom;
@@ -144,6 +218,7 @@ header>h2 {
     display: flex;
     justify-content: center;
     align-items: start;
+    gap: 5rem;
 }
 
 #sec-02>div>h2 {
@@ -158,12 +233,12 @@ header>h2 {
 
 #sec-02>div>p {
     font-family: 'Rajdhani', sans-serif;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #6C1919;
     width: 38rem;
     text-align: start;
     line-height: 1.8rem;
-    margin-left: 5rem;
+    
     
 }
 
@@ -179,22 +254,133 @@ header>h2 {
 
 #sec-03 {
     width: 100%;
-    height: 55rem;
+    min-height: 55rem;
 
     background-image: url(assets/images/bg-04.png);
     background-position: center bottom;
     background-size: cover;
-    
+    padding-top: 8rem;
+
+    display: flex;
+}
+
+#sec-03>div {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 5rem;
+    margin-left: 2rem;
+}
+
+#sec-03>div>h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3rem;
+    width: 25rem;
+    color: #6C1919;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+    text-align: start;
+}
+
+#sec-03>div>p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.6rem;
+    color: #6C1919;
+    width: 34rem;
+    text-align: end;
+    line-height: 1.8rem;
+}
+
+#sec-03>div>p>a {
+    text-decoration: underline;
+    color: #6C1919;
+    font-weight: bold;
+}
+
+#sec-03>nav {
+    margin-left: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+#sec-03>nav>a {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.9rem;
+    line-height: 1.6rem;
+    font-weight: bold;
+    width: 14.5rem;
+    height: 5rem;
+    padding: 1rem;
+    padding-bottom: 0;
+    color: #6C1919;
+    margin-bottom: 1rem;
+    text-align: end;
+
+    background-image: url(assets/images/box-02.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+    left: 61.8rem;
+    top: 10rem;
+    text-decoration: none;
+}
+
+#sec-03>nav>a:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    left: 61.5rem;
 }
 
 #sec-04 {
     width: 100%;
-    height: 100rem;
+    min-height: 100rem;
 
     background-image: url(assets/images/bg-05.png);
     background-position: center bottom;
     background-size: cover;
     
+    padding-top: 5rem;
+}
+
+#sec-04>div {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 5rem;
+    margin-left: 6rem;
+}
+
+#sec-04>div>h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 3rem;
+    width: 25rem;
+    color: #6C1919;
+    margin-bottom: 2rem;
+    line-height: 2.5rem;
+    text-align: end;
+}
+
+#sec-04>div>p {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.6rem;
+    color: #6C1919;
+    width: 38rem;
+    text-align: start;
+    line-height: 1.8rem;
+    
+    
+}
+
+#sec-04>div>p>a {
+    text-decoration: underline;
+    color: #6C1919;
+    font-weight: bold;
 }
 
 /* FOOTER */
@@ -202,10 +388,12 @@ header>h2 {
 footer {
     width: 100%;
     height: 22rem;
+    min-height: 22rem;
 
     background-image: url(assets/images/bg-06.png);
     background-position: center top;
     background-size: cover;
+    position: absolute;
 }
 
 #img-01 {
@@ -217,4 +405,76 @@ footer {
     width: 35rem;
     overflow: hidden;
     z-index: 10;
+}
+
+footer>ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    position: relative;
+    top: 8rem;
+    left: -13rem;
+}
+
+#sqr-01 {
+    background-image: url(assets/images/sqr-01.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 4rem;
+    min-height: 4rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+#sqr-02 {
+    background-image: url(assets/images/sqr-02.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 4rem;
+    min-height: 4rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+#sqr-03 {
+    background-image: url(assets/images/sqr-03.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 4rem;
+    min-height: 4rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+#sqr-04 {
+    background-image: url(assets/images/sqr-04.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 4rem;
+    min-height: 4rem;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+#sqr-05 {
+    background-image: url(assets/images/sqr-05.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    width: 4rem;
+    min-height: 4rem;
+    display: block;
+    margin-bottom: 2rem;
 }
